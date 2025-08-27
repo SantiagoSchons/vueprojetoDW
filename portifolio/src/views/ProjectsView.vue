@@ -1,10 +1,15 @@
+<script setup>
+import HeaderComponent from '../components/Header.vue'
+import FooterComponent from '../components/Footer.vue'
+</script>
 
+<template>
+  <HeaderComponent />
+    
+    <FooterComponent />
+</template>
 
-
-
-
-
-
+<style scoped>
 section.projects{
     & ul li{
         & h3{
@@ -21,19 +26,4 @@ section.projects{
 
     }
 }
-
-section.connect {
-    & ul {
-        & li {
-            text-align: center;
-            & span {
-                font-weight:bold ;
-                padding: 0 15px 0 0;
-            }
-        } 
-    }
-}
-
-
-
-
+</style>
