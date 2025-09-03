@@ -1,6 +1,36 @@
 <script setup>
 import HeaderComponent from '../components/Header.vue'
 import FooterComponent from '../components/Footer.vue'
+import { ref } from 'vue'
+
+const connect = ref([
+    {
+        id: 1,
+        title: "Instagram",
+        classe: "fa-brands fa-instagram",
+        link: "#",
+    },
+    {
+        id: 2,
+        title: "Behance",
+        classe: "fa-brands fa-behance", 
+        link: "#",
+    },
+    {
+        id: 3,
+        title: "Dribble",
+        classe: "fa-brands fa-dribbble", 
+        link: "#",
+    },
+    {
+        id: 4,
+        title: "LinkedIn",
+        classe: "fa-brands fa-linkedin-in", 
+        link: "#",
+    },
+]);
+
+
 
 </script>
  
@@ -18,17 +48,9 @@ import FooterComponent from '../components/Footer.vue'
         </section>
 
         <section class="connect">
-            <ul class="white-itens">
-                <li>
-                    <a href="#"><span class="fa-brands fa-instagram"></span>Instagram</a>
-
-                </li>
-                <li>
-                    <a href="#"><span class="fa-brands fa-behance"></span> Behance</a>    
-                </li>
-                <li><a href="#"><span class="fa-brands fa-dribbble"></span>Dribble</a>
-                </li>
-                <li><a href="#"><span class="fa-brands fa-linkedin-in"></span>LinkedIn</a>
+            <ul class="white-itens"> 
+                <li v-for="connects in connect">
+                    <a :href="connects.link"><span :class="connects.classe"></span>{{ connects.title }}</a>
                 </li>
             </ul>
         </section>
