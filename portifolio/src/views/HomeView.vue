@@ -20,7 +20,6 @@ const home = ref([
           classe: 'emogi',
           categorias: ['Web 3.0', 'HTML', 'Dashboard'],
         },
-
 ])
 
 
